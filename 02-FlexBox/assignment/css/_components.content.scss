@@ -1,11 +1,12 @@
-@import 'settings.variables';
-
 html {
     box-sizing: border-box;
     font-family: "Helvetica Neue", Arial, sans-serif;
     color: white;
     font-size: 32px;
     text-align: center;
+    @include media-query("mobile") {
+        font-size: 12px;
+    }
 }
 
 *,
@@ -16,7 +17,10 @@ html {
 
 .grid-container {
     display: grid;
-    grid-template-rows: 149px 81px 649px 152px; 
+    grid-template-rows: 149fr 81fr 649fr 152fr;
+    @include media-query("mobile") {
+        grid-template-rows: auto;
+    }
 }
 
 header {
@@ -33,7 +37,7 @@ nav {
 
 .content {
     display: grid;
-    grid-template-columns: 31.16% 68.83%;
+    grid-template-columns: 374fr 826fr;
 }
 
 aside {
