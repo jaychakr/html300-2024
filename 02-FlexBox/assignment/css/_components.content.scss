@@ -41,7 +41,7 @@ nav {
     justify-content: space-around;
 }
 
-/* fr units to match dimensions in design spec */
+/* CSS grid with fr units to match dimensions in design spec */
 .content {
     display: grid;
     grid-template-columns: 374fr 826fr;
