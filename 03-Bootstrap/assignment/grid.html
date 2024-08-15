@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg">
             <ul class="navbar-nav">
                 <li class="nav-item" data-toggle="tooltip" title="Landing Page">
-                    <a class="nav-link active" href="index.html">Landing Page</a>
+                    <a class="nav-link" href="index.html">Landing Page</a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" title="Images">
                     <a class="nav-link" href="images.html">Images</a>
@@ -28,7 +28,7 @@
                     <a class="nav-link" href="accordion.html">Accordion</a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" title="Grid System">
-                    <a class="nav-link" href="grid.html">Grid System</a>
+                    <a class="nav-link active" href="grid.html">Grid System</a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" title="Grid System">
                     <a class="nav-link" href="jumbotron.html">Jumbotron</a>
@@ -40,25 +40,27 @@
         </nav>
     </header>
     <main class="main">
-        <img src="https://t3.ftcdn.net/jpg/00/36/83/88/360_F_36838861_UHfFCcgipUy5Orup7vniss11Ly3OLsgf.jpg"
-            class="img-fluid" alt="bird landing"><br><br>
-        <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Magna consectetur porttitor ultrices egestas, maecenas
-            augue augue. Placerat auctor placerat suspendisse nisi condimentum; facilisis nisi primis fames. Dui erat
-            fusce elementum magnis cursus. Posuere lacus elementum commodo aliquet maecenas conubia. Fringilla eu
-            laoreet convallis; scelerisque luctus dictum. Sed erat volutpat; imperdiet quisque hac aptent mauris
-            consectetur. Inceptos nunc adipiscing volutpat eu lectus turpis leo.
-        </p>
-        <p>Viverra interdum sagittis donec litora sem phasellus ullamcorper. Maecenas hendrerit phasellus enim
-            vestibulum luctus suspendisse placerat felis suscipit. Finibus iaculis ultrices iaculis volutpat litora.
-            Potenti vehicula vivamus habitasse penatibus nec. Phasellus tortor dictumst diam senectus facilisi ultricies
-            sit posuere ultricies. Pretium et velit dis lectus cras.
-        </p>
-        <p>Aenean enim dictum vulputate interdum conubia efficitur. Mollis dapibus laoreet proin pharetra per taciti
-            felis a. Litora tortor sed maximus vulputate facilisi maecenas. Erat senectus eu risus quisque rutrum
-            aliquet venenatis. Tempus vestibulum vehicula a viverra habitant tempus; sociosqu cubilia porttitor.
-            Pellentesque vestibulum hendrerit nec platea proin hendrerit. Facilisis vehicula cursus blandit magna
-            elementum lacinia.
-        </p>
+        <div class="container mt-3">
+            <div class="row">
+                <!-- Menu Section -->
+                <nav class="col-xl-3 col-lg-4 col-md-5 col-sm-12 bg-light col-xs-3">
+                    <h3>Menu</h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    </ul>
+                </nav>
+                <!-- Content Section -->
+                <main class="col-xl-9 col-lg-8 col-md-7 col-sm-12 col-xs-3">
+                    <h2>Responsive Content</h2>
+                    <p>
+                        Resize the browser window to see the sections rearrange themselves.
+                    </p>
+                </main>
+            </div>
+        </div>
     </main>
 </body>
 

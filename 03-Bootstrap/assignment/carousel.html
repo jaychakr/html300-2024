@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg">
             <ul class="navbar-nav">
                 <li class="nav-item" data-toggle="tooltip" title="Landing Page">
-                    <a class="nav-link active" href="index.html">Landing Page</a>
+                    <a class="nav-link" href="index.html">Landing Page</a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" title="Images">
                     <a class="nav-link" href="images.html">Images</a>
@@ -34,31 +34,33 @@
                     <a class="nav-link" href="jumbotron.html">Jumbotron</a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" title="Carousel">
-                    <a class="nav-link" href="carousel.html">Carousel</a>
+                    <a class="nav-link active" href="carousel.html">Carousel</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main class="main">
-        <img src="https://t3.ftcdn.net/jpg/00/36/83/88/360_F_36838861_UHfFCcgipUy5Orup7vniss11Ly3OLsgf.jpg"
-            class="img-fluid" alt="bird landing"><br><br>
-        <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Magna consectetur porttitor ultrices egestas, maecenas
-            augue augue. Placerat auctor placerat suspendisse nisi condimentum; facilisis nisi primis fames. Dui erat
-            fusce elementum magnis cursus. Posuere lacus elementum commodo aliquet maecenas conubia. Fringilla eu
-            laoreet convallis; scelerisque luctus dictum. Sed erat volutpat; imperdiet quisque hac aptent mauris
-            consectetur. Inceptos nunc adipiscing volutpat eu lectus turpis leo.
-        </p>
-        <p>Viverra interdum sagittis donec litora sem phasellus ullamcorper. Maecenas hendrerit phasellus enim
-            vestibulum luctus suspendisse placerat felis suscipit. Finibus iaculis ultrices iaculis volutpat litora.
-            Potenti vehicula vivamus habitasse penatibus nec. Phasellus tortor dictumst diam senectus facilisi ultricies
-            sit posuere ultricies. Pretium et velit dis lectus cras.
-        </p>
-        <p>Aenean enim dictum vulputate interdum conubia efficitur. Mollis dapibus laoreet proin pharetra per taciti
-            felis a. Litora tortor sed maximus vulputate facilisi maecenas. Erat senectus eu risus quisque rutrum
-            aliquet venenatis. Tempus vestibulum vehicula a viverra habitant tempus; sociosqu cubilia porttitor.
-            Pellentesque vestibulum hendrerit nec platea proin hendrerit. Facilisis vehicula cursus blandit magna
-            elementum lacinia.
-        </p>
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Casa_de_Carousel_1.JPG" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://lirp.cdn-website.com/efc89e53/dms3rep/multi/opt/the-history-of-merry-go-rounds-1920w.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.daysoftheyear.com/wp-content/uploads/carousel-day.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </main>
 </body>
 
