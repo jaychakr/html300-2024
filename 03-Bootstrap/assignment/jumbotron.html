@@ -14,6 +14,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+        });
+    </script>
     <title>Assignment 03 - Bootstrap</title>
 </head>
 
@@ -21,23 +27,26 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <ul class="navbar-nav">
-                <li class="nav-item" data-toggle="tooltip" title="Landing Page">
+                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Landing Page">
                     <a class="nav-link" href="index.html">Landing Page</a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" title="Images">
+                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Images">
                     <a class="nav-link" href="images.html">Images</a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" title="Accordion">
+                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Accordion">
                     <a class="nav-link" href="accordion.html">Accordion</a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" title="Grid System">
+                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Grid System">
                     <a class="nav-link" href="grid.html">Grid System</a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" title="Grid System">
-                    <a class="nav-link" href="jumbotron.html">Jumbotron</a>
+                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Popovers">
+                    <a class="nav-link" href="popovers.html">Popovers</a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" title="Carousel">
-                    <a class="nav-link active" href="carousel.html">Carousel</a>
+                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Jumbotron">
+                    <a class="nav-link active" href="jumbotron.html">Jumbotron</a>
+                </li>
+                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Carousel">
+                    <a class="nav-link" href="carousel.html">Carousel</a>
                 </li>
             </ul>
         </nav>

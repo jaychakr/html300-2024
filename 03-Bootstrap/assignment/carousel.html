@@ -11,6 +11,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+        });
+    </script>
     <title>Assignment 03 - Bootstrap</title>
 </head>
 
@@ -18,29 +24,58 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <ul class="navbar-nav">
-                <li class="nav-item" data-toggle="tooltip" title="Landing Page">
+                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Landing Page">
                     <a class="nav-link" href="index.html">Landing Page</a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" title="Images">
+                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Images">
                     <a class="nav-link" href="images.html">Images</a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" title="Accordion">
+                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Accordion">
                     <a class="nav-link" href="accordion.html">Accordion</a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" title="Grid System">
+                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Grid System">
                     <a class="nav-link" href="grid.html">Grid System</a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" title="Grid System">
+                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Popovers">
+                    <a class="nav-link" href="popovers.html">Popovers</a>
+                </li>
+                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Jumbotron">
                     <a class="nav-link" href="jumbotron.html">Jumbotron</a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" title="Carousel">
+                <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Carousel">
                     <a class="nav-link active" href="carousel.html">Carousel</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main class="main">
-        <div id="carouselExample" class="carousel slide">
+        <!--<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Casa_de_Carousel_1.JPG"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://lirp.cdn-website.com/efc89e53/dms3rep/multi/opt/the-history-of-merry-go-rounds-1920w.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.daysoftheyear.com/wp-content/uploads/carousel-day.jpg" class="d-block w-100"
+                        alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>-->
+        <!--<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Casa_de_Carousel_1.JPG" class="d-block w-100" alt="...">
@@ -52,15 +87,38 @@
                     <img src="https://www.daysoftheyear.com/wp-content/uploads/carousel-day.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div>
+        </div>-->
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="3000">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Casa_de_Carousel_1.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="https://lirp.cdn-website.com/efc89e53/dms3rep/multi/opt/the-history-of-merry-go-rounds-1920w.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="https://www.daysoftheyear.com/wp-content/uploads/carousel-day.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
     </main>
 </body>
 
