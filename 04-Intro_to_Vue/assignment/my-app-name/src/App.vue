@@ -1,8 +1,5 @@
 <script setup>
 import { ref, computed } from "vue";
-/*import Home from "./components/HomePage.vue";
-import About from "./components/AboutPage.vue";
-import NotFound from "./components/NotFound.vue";*/
 import LandingPage from "./components/LandingPage.vue";
 import ImagesPage from "./components/ImagesPage.vue";
 import AccordionPage from "./components/AccordionPage.vue";
@@ -21,15 +18,13 @@ window.addEventListener("hashchange", () => {
 });
 
 const currentView = computed(() => {
-  return routes[currentPath.value.slice(1) || "/"] /*|| NotFound*/;
+  return routes[currentPath.value.slice(1) || "/"];
 });
 </script>
 
 <template>
   <!--<img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <a href="#/">Home</a> | <a href="#/about">About</a> |
-  <a href="#/non-existent-path">Broken Link</a>-->
+  <HelloWorld msg="Welcome to Your Vue.js App"/>-->
   <a href="#/">Landing Page</a> | <a href="#/images">Images</a> |
   <a href="#/accordion">Accordion</a> | <a href="#/grid">Grid</a>
   <component :is="currentView" />
