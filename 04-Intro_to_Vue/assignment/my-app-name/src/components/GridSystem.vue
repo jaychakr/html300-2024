@@ -11,7 +11,7 @@ const navLinks = ref(["Home", "Features", "Pricing", "About"]);
           <h3>Menu</h3>
           <ul class="nav flex-column">
             <li v-for="link in navLinks" :key="link">
-                <a class="nav-link" href="#">{{ link }}</a>
+              <a class="nav-link" href="#">{{ link }}</a>
             </li>
           </ul>
         </nav>

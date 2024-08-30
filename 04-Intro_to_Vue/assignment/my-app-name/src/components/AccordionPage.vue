@@ -67,5 +67,6 @@ const accordionItems = ref([
         </div>
       </div>
     </div>
+    <br />
   </main>
 </template>
