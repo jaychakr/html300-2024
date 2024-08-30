@@ -22,32 +22,8 @@ const images = ref([
 <template>
   <main class="main">
     <br />
-    <!--<img
-      src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600"
-      class="img-fluid"
-      alt="mountains"
-    /><br /><br />
-    <img
-      src="https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=600"
-      class="img-fluid"
-      alt="lake"
-    /><br /><br />
-    <img
-      src="https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg?auto=compress&cs=tinysrgb&w=600"
-      class="img-fluid"
-      alt="greenery"
-    /><br /><br />
-    <img
-      src="https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&w=600"
-      class="img-fluid"
-      alt="river"
-    /><br /><br />-->
     <div v-for="image in images" :key="image.src">
-      <img
-        :src="image.src"
-        class="img-fluid"
-        :alt="image.alt"
-      /><br><br>
+      <img :src="image.src" class="img-fluid" :alt="image.alt" /><br /><br />
     </div>
   </main>
 </template>

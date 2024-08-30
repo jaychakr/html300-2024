@@ -23,24 +23,11 @@ const currentView = computed(() => {
 </script>
 
 <template>
-  <!--<img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>-->
   <a href="#/">Landing Page</a> | <a href="#/images">Images</a> |
   <a href="#/accordion">Accordion</a> | <a href="#/grid">Grid</a>
   <component :is="currentView" />
   <footer>Footer for All Pages</footer>
 </template>
-
-<script>
-import HelloWorld from "./components/HelloWorld.vue";
-
-export default {
-  name: "App",
-  components: {
-    HelloWorld,
-  },
-};
-</script>
 
 <style>
 #app {
