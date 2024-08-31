@@ -7,7 +7,7 @@ import GridSystem from "./components/GridSystem.vue";
 import VueCSS from "./components/VueCSS.vue";
 import InputBox from "./components/InputBox.vue";
 const routes = {
-  "/landing": LandingPage,
+  "/": LandingPage,
   "/images": ImagesPage,
   "/accordion": AccordionPage,
   "/grid": GridSystem,
@@ -27,7 +27,7 @@ const currentView = computed(() => {
 </script>
 
 <template>
-  <a href="#/landing">Landing Page</a> | <a href="#/images">Images</a> |
+  <a href="#/">Landing Page</a> | <a href="#/images">Images</a> |
   <a href="#/accordion">Accordion</a> | <a href="#/grid">Grid</a> |
   <a href="#/css">Vue CSS</a> | <a href="#/input">Input Box</a>
   <component :is="currentView" />
