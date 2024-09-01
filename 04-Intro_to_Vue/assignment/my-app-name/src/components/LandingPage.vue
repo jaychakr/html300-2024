@@ -12,6 +12,8 @@ const show = ref(true);
       Each link above routes to a .vue file containing script, template, and
       style
     </p>
+    <!-- The v-if directive is an if statement that you can add inline to the HTML of your <template> content.
+    In this example, when we click on the button, visibility will toggle between two different paragraphs and two different images. -->
     <p><button @click="show = !show">Toggle paragraph visibility</button></p>
     <p v-if="show">Can you see me?</p>
     <p v-else>Flying away!</p>

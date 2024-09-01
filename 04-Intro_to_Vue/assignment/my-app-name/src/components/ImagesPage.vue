@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+// Array of images
 const images = ref([
   {
     src: "https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -22,6 +23,7 @@ const images = ref([
 <template>
   <main class="main">
     <br />
+    <!-- v-for to iterate through images-->
     <div v-for="image in images" :key="image.src">
       <img :src="image.src" class="img-fluid" :alt="image.alt" /><br /><br />
     </div>

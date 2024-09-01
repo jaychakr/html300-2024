@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+// Object to fill out content in accordion
 const accordionItems = ref([
   {
     button: "Accordion Item #1",
@@ -40,11 +41,13 @@ const accordionItems = ref([
   <main class="main">
     <br />
     <div class="accordion" id="accordionExample">
+      <!-- The v-for directive is used for iterating over items in an array, making it possible to easily render a list of items -->
       <div
         class="accordion-item"
         v-for="(accordionItem, index) in accordionItems"
         :key="accordionItem.button"
       >
+        <!-- accordionItem refers to current item in array, index refers to position of current item in array-->
         <h2 class="accordion-header" :id="'heading' + (index + 1)">
           <button
             class="accordion-button"
@@ -54,6 +57,7 @@ const accordionItems = ref([
             aria-expanded="true"
             :aria-controls="'collapse' + (index + 1)"
           >
+            <!-- And by using dot notation for properties, v-for can also be used to iterate over an array of objects.-->
             {{ accordionItem.button }}
           </button>
         </h2>

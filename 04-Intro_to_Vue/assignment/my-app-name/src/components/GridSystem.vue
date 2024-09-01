@@ -10,6 +10,7 @@ const navLinks = ref(["Home", "Features", "Pricing", "About"]);
         <nav class="col-xl-3 col-lg-4 col-md-5 col-sm-12 bg-light col-xs-3">
           <h3>Menu</h3>
           <ul class="nav flex-column">
+            <!-- v-for to iterate through navLink elements-->
             <li v-for="link in navLinks" :key="link">
               <a class="nav-link" href="#">{{ link }}</a>
             </li>
