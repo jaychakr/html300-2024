@@ -1,5 +1,6 @@
 <script setup>
 import { defineProps } from "vue";
+import borderToggle from "./borderToggle";
 const props = defineProps({
   src: {
     type: String,
@@ -18,8 +19,11 @@ const props = defineProps({
     default: "Default Image",
   },
 });
-import borderToggle from "./borderToggle";
-const { border, toggle } = borderToggle();
+</script>
+<script>
+export default {
+  mixins: [borderToggle],
+};
 </script>
 <template>
   <img
