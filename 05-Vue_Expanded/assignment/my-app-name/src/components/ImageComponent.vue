@@ -19,6 +19,11 @@ const props = defineProps({
     default: "Default Image",
   },
 });
+const vOpacity = {
+  mounted(el, binding) {
+    el.style.opacity = binding.value;
+  },
+};
 </script>
 <script>
 export default {
@@ -34,6 +39,7 @@ export default {
     :title="props.title"
     @click="toggle"
     style="border: 3px solid black"
+    v-opacity="0.75"
   />
   <img
     v-else
