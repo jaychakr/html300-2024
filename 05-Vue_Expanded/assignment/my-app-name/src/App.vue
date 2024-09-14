@@ -32,6 +32,7 @@ const currentView = computed(() => {
 <!-- the <template> that renders <a> links to the different view paths, and a special <component> that comes from Vue that is configured to
 render whichever component we have set to the currentView variable defined in the <script> portion of our App.vue -->
 <template>
+  <!-- use of slot for header component -->
   <NamedSlotsComponent>
     <template v-slot:header>
       <h1>Header Content</h1>

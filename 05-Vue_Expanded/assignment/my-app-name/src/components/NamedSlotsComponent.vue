@@ -1,3 +1,4 @@
+<!-- creation of slot for header component -->
 <script setup></script>
 <template>
     <header>

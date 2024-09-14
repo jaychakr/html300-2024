@@ -1,6 +1,8 @@
+<!-- convert the image markup into a separate component in its own file -->
 <script setup>
 import { defineProps } from "vue";
 import borderToggle from "./borderToggle";
+// image component should have props for at least the image src, alt, & title attributes, use prop validation
 const props = defineProps({
   src: {
     type: String,
@@ -19,6 +21,7 @@ const props = defineProps({
     default: "Default Image",
   },
 });
+// custom directive
 const vOpacity = {
   mounted(el, binding) {
     el.style.opacity = binding.value;
@@ -30,7 +33,9 @@ export default {
   mixins: [borderToggle],
 };
 </script>
+
 <template>
+  <!-- toggle on/off border around the image on click, apply the mixin to the image component -->
   <img
     v-if="border"
     :src="props.src"

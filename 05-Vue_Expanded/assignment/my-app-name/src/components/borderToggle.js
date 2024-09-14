@@ -1,3 +1,4 @@
+// mixin for image component that should toggle on/off border
 export default {
   data() {
     return {
@@ -10,4 +11,3 @@ export default {
     },
   },
 };
-
