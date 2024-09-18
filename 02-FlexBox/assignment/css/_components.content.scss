@@ -1,5 +1,14 @@
+/* set font family, color, size, and alignment
+font size smaller on mobile */
 html {
     box-sizing: border-box;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    @include media-query("mobile") {
+        font-size: 12px;
+    }
 }
 
 *,
@@ -8,6 +17,63 @@ html {
     box-sizing: inherit;
 }
 
+/* CSS grid to match design spec link
+auto row height on mobile */
+.grid-container {
+    display: grid;
+    grid-template-rows: 149fr 81fr 649fr 152fr;
+    @include media-query("mobile") {
+        grid-template-rows: auto;
+    }
+}
+
+/* red header */
+header {
+    padding: 1rem;
+    background-color: $red;
+}
+
+/* green nav styled with flexbox */
+nav {
+    padding: 0.5rem;
+    background-color: $green;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* CSS grid with fr units to match dimensions in design spec */
+.content {
+    display: grid;
+    grid-template-columns: 374fr 826fr;
+}
+
+/* purple aside styled with flexbox */
+aside {
+    padding: 2rem;
+    background-color: $purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* resize images */
+img {
+    width: 50%;
+}
+
+/* orange main section */
 .main {
     padding: 2rem;
+    background-color: $orange;
+}
+
+/* lorem ipsum dummy text */
+.lorem-ipsum {
+    font-size: 12px;
+}
+
+/* blue footer */
+footer {
+    padding: 1rem;
+    background-color: $blue;
 }
